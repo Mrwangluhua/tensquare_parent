@@ -1,0 +1,10 @@
+server:
+  port: 9033
+spring:
+  application:
+    name: tensquare-comment
+  data:
+    mongodb:
+      host: 192.168.200.133:27017
+      database: commentdb
+

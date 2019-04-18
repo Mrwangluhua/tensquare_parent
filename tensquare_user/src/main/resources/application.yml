@@ -1,0 +1,28 @@
+server:
+  port: 9008
+spring:
+  application:
+    name: tensquare-user
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.200.133:3306/tensquare_user?characterEncoding=UTF-8
+    username: root
+    password: 123456
+  jpa:
+    database: mysql
+    show-sql: true
+  redis:
+    host: 192.168.200.133
+  rabbitmq:
+    host: 192.168.200.133
+jwt:
+  config:
+    key: wlh
+    ttl: 3600000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka/
+  instance:
+    prefer-ip-address: true #是否要eureka自动发现eureka客户端，简单来说就是是否自动获取微服务
